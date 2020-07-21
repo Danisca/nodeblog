@@ -1,0 +1,12 @@
+<%- include( "partials/header.ejs") -%>
+<h1>Home</h1>
+<p><%= content%></p>
+<% articles.forEach(article => { %>
+    <h1><%= article.title %></h1>
+    <p class="">
+        <%= article.body.substring(0,100) + "..." %> 
+        <a class="articles" href=" <%- "/show/" + article.title %> "> Read More</a>
+    </p>
+<% }) %>
+
+<%- include("partials/footer.ejs") -%>
